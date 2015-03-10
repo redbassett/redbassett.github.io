@@ -1,0 +1,74 @@
+body {
+  background-color: black;
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+  margin: 0; }
+
+header#site-header nav ul, footer#site-footer nav ul {
+  margin: 0;
+  width: 100%;
+  display: block;
+  padding: 0;
+  background-color: #618e34;
+  height: 25px;
+  box-sizing: border-box; }
+  header#site-header nav ul:after, footer#site-footer nav ul:after {
+    position: absolute;
+    content: '';
+    background-color: #8c8c8c;
+    width: 10%;
+    height: 25px;
+    right: 0; }
+  header#site-header nav ul li, footer#site-footer nav ul li {
+    display: inline-block;
+    list-style: none; }
+    header#site-header nav ul li a, footer#site-footer nav ul li a {
+      text-decoration: none;
+      font-size: 18px; }
+      header#site-header nav ul li a:link, header#site-header nav ul li a:active, header#site-header nav ul li a:visited, footer#site-footer nav ul li a:link, footer#site-footer nav ul li a:active, footer#site-footer nav ul li a:visited {
+        color: black; }
+      header#site-header nav ul li a:hover, footer#site-footer nav ul li a:hover {
+        color: #404040; }
+
+header#site-header {
+  width: 100%;
+  position: relative; }
+  header#site-header:after {
+    content: '';
+    background-color: black;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1; }
+  header#site-header h1 {
+    display: block;
+    color: #618e34;
+    margin: 10px;
+    font-size: 45px;
+    padding-left: 10px; }
+    header#site-header h1 a, header#site-header h1 a:link, header#site-header h1 a:hover, header#site-header h1 a:active, header#site-header h1 a:visited {
+      color: inherit;
+      text-decoration: none; }
+  header#site-header p#tagline {
+    display: block;
+    color: #8c8c8c;
+    margin: 10px;
+    padding-left: 10px; }
+  header#site-header nav ul {
+    padding-left: 20px;
+    margin: 10px 0; }
+    header#site-header nav ul li:not(:first-child) {
+      margin-left: 30px; }
+
+footer#site-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%; }
+  footer#site-footer nav ul {
+    text-align: center; }
+    footer#site-footer nav ul li {
+      margin: 0 30px; }
+
+/*# sourceMappingURL=global.css.map */
