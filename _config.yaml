@@ -1,1 +1,2 @@
 include: [".well-known"]
+exclude: ["site.sublime-project","site.sublime-workspace"]
