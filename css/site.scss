@@ -150,7 +150,7 @@ footer#site-footer {
 }
 
 body.home {
-	background-image: url("../images/home-background.jpg");
+	background-image: url("../images/backgrounds/home.jpg");
 }
 
 nav#social {
@@ -180,7 +180,8 @@ nav#social {
 }
 
 body.lighting {
-	background-image: url("../images/lighting-background.jpg");
+	background-image: url("../images/backgrounds/lighting.jpg");
+	background-size: cover;
 }
 
 section.lighting-section {
