@@ -23,15 +23,51 @@ $theme-black: rgb(35, 31, 32);
 	}
 }
 
+@mixin rounded($radius: .5em) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	border-radius: $radius;
+}
+
+@mixin transparent-background($color: black, $opacity: 0.5) {
+	&:after {
+		content: '';
+		background-color: $color;
+		opacity: $opacity;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: -1;
+	}
+}
+
 
 body {
 	background-color: black;
 	font-family: Futura, "Trebuchet MS", Arial, sans-serif;
 	margin: 0;
 	color: $theme-gray;
+	
+	// Common background settings for background images
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center center;
+	background-size: auto 100%;
+	
+	// Add marign for all immediate children
+	// This is overriden by the header and footer to give the appearence
+	// of the body just being between the header and footer on the page
+	& > * {
+		margin-left: 20px;
+		margin-right: 20px;
+	}
 }
 
 header#site-header, footer#site-footer {
+	margin-left: 0;
+	
 	nav {
 		ul {
 			@include bar;
@@ -61,17 +97,7 @@ header#site-header {
 	width: 100%;
 	position: relative;
 	
-	&:after {
-		content: '';
-		background-color: black;
-		opacity: 0.5;
-		position: absolute;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		z-index: -1;
-	}
+	@include transparent-background(black, 0.5);
 	
 	h1 {
 		display: block;
@@ -125,10 +151,6 @@ footer#site-footer {
 
 body.home {
 	background-image: url("../images/home-background.jpg");
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-position: center center;
-	background-size: auto 100%;
 }
 
 nav#social {
@@ -151,6 +173,86 @@ nav#social {
 				
 				&:hover {
 					color: lighten($theme-gray, 10%);
+				}
+			}
+		}
+	}
+}
+
+body.lighting {
+	background-image: url("../images/lighting-background.jpg");
+}
+
+section.lighting-section {
+	@include transparent-background(#3d3d3d, 0.5);
+	border-color: $theme-gray;
+	border-width: 1px;
+	border-style: solid;
+	@include rounded;
+	
+	&:after {
+		@include rounded;
+	}
+	
+	position: absolute;
+	width: 350px;
+	padding: 10px;
+	margin-top: 30px;
+	
+	h1 {
+		margin: 0;
+	}
+	
+	ul {
+		padding-left: 20px;
+		
+		li {
+			list-style: none;
+			margin: 10px 0;
+			
+			h2 {
+				margin: 10px 0;
+			}
+			
+			a, a:link, a:hover, a:active, a:visited {
+				color: inherit;
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+ul.show-list {
+	padding: 0;
+	
+	li {
+		list-style: none;
+		
+		section {
+			background-color: #202020;
+			padding: 10px;
+			@include rounded;
+			
+			h2 {
+				margin-top: 0;
+				margin-left: 30px;
+			}
+			
+			ul.inline-gallery {
+				padding: 0;
+				text-align: center;
+				
+				li {
+					list-style: none;
+					display: inline-block;
+					
+					a {
+						cursor: pointer;
+						
+						img {
+							
+						}
+					}
 				}
 			}
 		}
