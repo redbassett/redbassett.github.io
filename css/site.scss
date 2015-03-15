@@ -4,6 +4,8 @@ $theme-green: darken(rgb(122, 179, 66), 10%);
 $theme-gray: rgb(140, 140, 140);
 $theme-black: rgb(35, 31, 32);
 
+$header-height: 130px;
+
 @mixin bar {
 	margin: 0;
 	width: 100%;
@@ -43,8 +45,21 @@ $theme-black: rgb(35, 31, 32);
 	}
 }
 
+* {
+	box-sizing: border-box;
+}
+
+html {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
 
 body {
+	width: 100%;
+	height: 100%;
 	background-color: black;
 	font-family: Futura, "Trebuchet MS", Arial, sans-serif;
 	margin: 0;
@@ -55,18 +70,12 @@ body {
 	background-attachment: fixed;
 	background-position: center center;
 	background-size: auto 100%;
-	
-	// Add marign for all immediate children
-	// This is overriden by the header and footer to give the appearence
-	// of the body just being between the header and footer on the page
-	& > * {
-		margin-left: 20px;
-		margin-right: 20px;
-	}
 }
 
 header#site-header, footer#site-footer {
 	margin-left: 0;
+	position: fixed;
+	z-index: 10;
 	
 	nav {
 		ul {
@@ -95,7 +104,7 @@ header#site-header, footer#site-footer {
 
 header#site-header {
 	width: 100%;
-	position: relative;
+	height: $header-height;
 	
 	@include transparent-background(black, 0.5);
 	
@@ -105,6 +114,7 @@ header#site-header {
 		margin: 10px;
 		font-size: 45px;
 		padding-left: 10px;
+		margin-top: 0;
 		
 		a, a:link, a:hover, a:active, a:visited {
 			color: inherit;
@@ -133,8 +143,17 @@ header#site-header {
 	}
 }
 
+div#wrapper {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	padding-top: $header-height;
+	padding-bottom: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
 footer#site-footer {
-	position: fixed;
 	bottom: 0;
 	width: 100%;
 	
@@ -198,7 +217,7 @@ section.lighting-section {
 	position: absolute;
 	width: 350px;
 	padding: 10px;
-	margin-top: 30px;
+	margin-top: 20px;
 	
 	h1 {
 		margin: 0;
@@ -223,36 +242,72 @@ section.lighting-section {
 	}
 }
 
-ul.show-list {
-	padding: 0;
+// Individual show galleries
+
+div.gallery {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	text-align: center;
 	
-	li {
-		list-style: none;
+	padding: 0 20px;
+
+	div.show-info {
+		position: absolute;
+		text-align: center;
+		height: 120px;
+		top: 0;
+		width: 100%;
+
+		h1.show-title {
+			text-align: center;
+			margin: 0;
+		}
 		
-		section {
-			background-color: #202020;
-			padding: 10px;
-			@include rounded;
+		span {
+			display: block;
+		}
+	}
+	
+	div.main-image {
+		position: absolute;
+		top: 120px;
+		bottom: 170px;
+		right: 0;
+		left: 0;
+		text-align: center;
+		
+		img {
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
+	
+	div.gallery-thumbs {
+		position: absolute;
+		bottom: 20px;
+		padding: 0;
+		overflow-x: auto;
+		overflow-y: hidden;
+		height: 150px;
+		white-space: nowrap;
+		right: 20px;
+		left: 20px;
+		
+		ul {
+			height: 150px;
+			padding: 0;
 			
-			h2 {
-				margin-top: 0;
-				margin-left: 30px;
-			}
-			
-			ul.inline-gallery {
-				padding: 0;
-				text-align: center;
+			li {
+				list-style: none;
+				display: inline-block;
 				
-				li {
-					list-style: none;
-					display: inline-block;
+				a {
+					cursor: pointer;
 					
-					a {
-						cursor: pointer;
+					img {
 						
-						img {
-							
-						}
 					}
 				}
 			}
