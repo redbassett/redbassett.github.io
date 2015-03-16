@@ -1,5 +1,10 @@
 ---
 ---
+$.fn.preloadImages = ->
+	$('<img>').attr('src', argument) for argument in arguments
+
+
+
 (($) ->
 	$ ->
 		$mainImage = $ 'img#gallery-main-image'
@@ -19,4 +24,8 @@
 			switch e.which
 				when 37 then $currentThumb.parent().prev().find('a').click() if !$currentThumb.is(':first')
 				when 39 then $currentThumb.parent().next().find('a').click() if !$currentThumb.is(':last')
+		$thumbs.each ->
+			$(this).attr('data-image').preloadImages
+		
+		
 ) jQuery
