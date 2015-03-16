@@ -8,10 +8,12 @@
 			$(this).click ->
 				$selectedImage = $(this)
 				if $selectedImage.attr('data-image') != $mainImage.attr('src')
-					$mainImage.fadeOut 300, ->
-						$mainImage.attr 'src', $selectedImage.attr('data-image')
+					$mainImage.parent().fadeOut 300, ->
+						$mainImage.attr('src', $selectedImage.attr('data-image'))
 							.attr 'data-credit', $selectedImage.attr('data-credit')
-						$mainImage.fadeIn()
+						console.log($selectedImage.attr('data-credit'))
+						$('div.photo-credit').text('Photo Credit: ' + $mainImage.attr('data-credit'))
+						$mainImage.parent().fadeIn()
 		$(document).keydown (e) ->
 			$currentThumb = $ 'a[data-image="' + $mainImage.attr('src') + '"]'
 			switch e.which
