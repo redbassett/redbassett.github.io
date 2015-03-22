@@ -56,6 +56,15 @@ html {
 	padding: 0;
 }
 
+a {
+	color: $theme-gray;
+	text-decoration: none;
+	
+	&:hover {
+		color: lighten($theme-gray, 10%);
+	}
+}
+
 
 body {
 	width: 100%;
@@ -312,5 +321,40 @@ div.gallery {
 				}
 			}
 		}
+	}
+}
+
+body.code {
+	background-image: url("../images/backgrounds/code.jpg");
+	background-size: cover;
+}
+
+section.code {
+	width: 50%;
+	margin: 0 auto;
+	position: relative;
+	padding: 10px;
+	margin-top: 20px;
+	
+	@include transparent-background(#3d3d3d, 0.5);
+	border-color: $theme-gray;
+	border-width: 1px;
+	border-style: solid;
+	@include rounded;
+	&:after {
+		@include rounded;
+	}
+		
+	div.github-link {
+		text-align: center;
+		
+		a {
+			font-size: 3em;
+			display: block;
+		}
+	}
+	
+	div.dev-notice {
+		text-align: center;
 	}
 }
