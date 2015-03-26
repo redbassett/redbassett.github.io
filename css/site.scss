@@ -344,7 +344,7 @@ section.code {
 	&:after {
 		@include rounded;
 	}
-		
+	
 	div.github-link {
 		text-align: center;
 		
@@ -356,5 +356,35 @@ section.code {
 	
 	div.dev-notice {
 		text-align: center;
+	}
+}
+
+body.resume {
+	
+}
+
+section.resume {
+	width: 50%;
+	margin: 0 auto;
+	position: relative;
+	padding: 10px;
+	margin-top: 20px;
+	
+	@include transparent-background(#3d3d3d, 0.5);
+	border-color: $theme-gray;
+	border-width: 1px;
+	border-style: solid;
+	@include rounded;
+	&:after {
+		@include rounded;
+	}
+}
+
+table.resume-table {
+	border-collapse: collapse;
+	width: 100%;
+	
+	tr {
+		border-bottom: solid 1px $theme-gray;
 	}
 }

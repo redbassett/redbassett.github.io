@@ -1,6 +1,8 @@
 ---
 ---
 (($) ->
+	$.imgpreload(['/images/backgrounds/home.jpg', '/images/backgrounds/lighting.jpg', '/images/backgrounds/code.jpg']);
+	
 	$ ->
 		$mainImage = $ 'img#gallery-main-image'
 		$thumbs = $ 'div.gallery-thumbs ul li a'
