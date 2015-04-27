@@ -207,12 +207,7 @@ nav#social {
 	}
 }
 
-body.lighting {
-	background-image: url("../images/backgrounds/lighting.jpg");
-	background-size: cover;
-}
-
-section.lighting-section {
+section.show-list {
 	@include transparent-background(#3d3d3d, 0.5);
 	border-color: $theme-gray;
 	border-width: 1px;
@@ -249,6 +244,11 @@ section.lighting-section {
 			}
 		}
 	}
+}
+
+body.lighting {
+	background-image: url("../images/backgrounds/lighting.jpg");
+	background-size: cover;
 }
 
 // Individual show galleries
