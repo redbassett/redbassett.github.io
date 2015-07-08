@@ -1,30 +1,7 @@
 ---
 layout: site
 title: The Wizard of OZ - Harry Grillo
-class: oz
+class: wizard-oz
 ---
-<script>
-	$.imgpreload(['/images/photos/wizardoz/wizardoz1.jpg','/images/photos/wizardoz/wizardoz2.jpg','/images/photos/wizardoz/wizardoz3.jpg','/images/photos/wizardoz/wizardoz4.jpg','/images/photos/wizardoz/wizardoz5.jpg','/images/photos/wizardoz/wizardoz6.jpg','/images/photos/wizardoz/wizardoz7.jpg','/images/photos/wizardoz/wizardoz8.jpg','/images/photos/wizardoz/wizardoz9.jpg','/images/photos/wizardoz/wizardoz10.jpg']);
-</script>
-<div class="gallery">
-	<div class="show-info">
-		<h1 class="show-title">The Wizard of OZ</h1>
-		<span>directed by: <b>Shari John</b></span>
-		<span>produced by: <b>The New Surry Theatre and Acting School</b></span>
-	</div>
-	<div class="main-image">
-		<img id="gallery-main-image" src="/images/photos/wizardoz/wizardoz1.jpg" alt="" data-image="image-1">
-	</div>
-	<div class="gallery-thumbs">
-		<ul>
-			<li><a data-image="/images/photos/wizardoz/wizardoz1.jpg"><img src="/images/photos/thumbs/wizardoz/wizardoz1t.jpg" alt=""></a></li>
-			<li><a data-image="/images/photos/wizardoz/wizardoz4.jpg"><img src="/images/photos/thumbs/wizardoz/wizardoz4t.jpg" alt=""></a></li>
-			<li><a data-image="/images/photos/wizardoz/wizardoz5.jpg"><img src="/images/photos/thumbs/wizardoz/wizardoz5t.jpg" alt=""></a></li>
-			<li><a data-image="/images/photos/wizardoz/wizardoz6.jpg"><img src="/images/photos/thumbs/wizardoz/wizardoz6t.jpg" alt=""></a></li>
-			<li><a data-image="/images/photos/wizardoz/wizardoz7.jpg"><img src="/images/photos/thumbs/wizardoz/wizardoz7t.jpg" alt=""></a></li>
-			<li><a data-image="/images/photos/wizardoz/wizardoz8.jpg"><img src="/images/photos/thumbs/wizardoz/wizardoz8t.jpg" alt=""></a></li>
-			<li><a data-image="/images/photos/wizardoz/wizardoz9.jpg"><img src="/images/photos/thumbs/wizardoz/wizardoz9t.jpg" alt=""></a></li>
-			<li><a data-image="/images/photos/wizardoz/wizardoz10.jpg"><img src="/images/photos/thumbs/wizardoz/wizardoz10t.jpg" alt=""></a></li>
-		</ul>
-	</div>
-</div>
+{% assign show = site.data.shows.wizardoz %}
+{% include show-page.html %}

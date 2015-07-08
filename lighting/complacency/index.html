@@ -3,30 +3,5 @@ layout: site
 title: Complacency - Harry Grillo
 class: complacency
 ---
-<script>
-	$.imgpreload(['/images/photos/complacency/jhat1.jpg','/images/photos/jhat/jhat2.jpg','/images/photos/jhat/jhat3.jpg','/images/photos/jhat/jhat4.jpg','/images/photos/jhat/jhat5.jpg','/images/photos/jhat/jhat6.jpg','/images/photos/jhat/jhat7.jpg','/images/photos/jhat/jhat8.jpg']);
-</script>
-<div class="gallery">
-	<div class="show-info">
-		<h1 class="show-title">Complacency</h1>
-		<span>by: <b>Jimmy Lovett</b></span>
-		<span>directed by: <b>Jimmy Lovett &amp; Martin Hutchinson</b></span>
-		<span>produced by: <b>Hampshire College Theatre Board</b></span>
-	</div>
-	<div class="main-image">
-		<img id="gallery-main-image" src="/images/photos/complacency/complacency1.jpg" alt="" data-image="image-1" data-credit="Janine Norton">
-		<div class="photo-credit">Photo Credit: Janine Norton</div>
-	</div>
-	<div class="gallery-thumbs">
-		<ul>
-			<li><a data-image="/images/photos/complacency/complacency1.jpg" data-credit="Janine Norton"><img src="/images/photos/thumbs/complacency/complacency1t.jpg" alt=""></a></li>
-			<li><a data-image="/images/photos/complacency/complacency2.jpg" data-credit="Janine Norton"><img src="/images/photos/thumbs/complacency/complacency2t.jpg" alt=""></a></li>
-			<li><a data-image="/images/photos/complacency/complacency3.jpg" data-credit="Janine Norton"><img src="/images/photos/thumbs/complacency/complacency3t.jpg" alt=""></a></li>
-			<li><a data-image="/images/photos/complacency/complacency4.jpg" data-credit="Janine Norton"><img src="/images/photos/thumbs/complacency/complacency4t.jpg" alt=""></a></li>
-			<li><a data-image="/images/photos/complacency/complacency5.jpg" data-credit="Janine Norton"><img src="/images/photos/thumbs/complacency/complacency5t.jpg" alt=""></a></li>
-			<li><a data-image="/images/photos/complacency/complacency6.jpg" data-credit="Janine Norton"><img src="/images/photos/thumbs/complacency/complacency6t.jpg" alt=""></a></li>
-			<li><a data-image="/images/photos/complacency/complacency7.jpg" data-credit="Janine Norton"><img src="/images/photos/thumbs/complacency/complacency7t.jpg" alt=""></a></li>
-			<li><a data-image="/images/photos/complacency/complacency8.jpg" data-credit="Janine Norton"><img src="/images/photos/thumbs/complacency/complacency8t.jpg" alt=""></a></li>
-		</ul>
-	</div>
-</div>
+{% assign show = site.data.shows.complacency %}
+{% include show-page.html %}

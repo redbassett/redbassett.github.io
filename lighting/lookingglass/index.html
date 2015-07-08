@@ -3,39 +3,5 @@ layout: site
 title: Through the Looking Glass and What Alice Found There - Harry Grillo
 class: looking-glass
 ---
-<script>
-	$.imgpreload(['/images/photos/lookingglass/lookingglass1.jpg','/images/photos/lookingglass/lookingglass2.jpg','/images/photos/lookingglass/lookingglass3.jpg','/images/photos/lookingglass/lookingglass4.jpg','/images/photos/lookingglass/lookingglass5.jpg','/images/photos/lookingglass/lookingglass6.jpg','/images/photos/lookingglass/lookingglass7.jpg','/images/photos/lookingglass/lookingglass8.jpg','/images/photos/lookingglass/lookingglass9.jpg','/images/photos/lookingglass/lookingglass10.jpg','/images/photos/lookingglass/lookingglass11.jpg','/images/photos/lookingglass/lookingglass12.jpg','/images/photos/lookingglass/lookingglass13.jpg','/images/photos/lookingglass/lookingglass14.jpg','/images/photos/lookingglass/lookingglass15.jpg','/images/photos/lookingglass/lookingglass16.jpg','/images/photos/lookingglass/lookingglass17.jpg','/images/photos/lookingglass/lookingglass18.jpg']);
-</script>
-<div class="gallery">
-	<div class="show-info">
-		<h1 class="show-title">Through the Looking Glass and What Alice Found There</h1>
-		<span>adaptation by: <b>Courtney Price</b></span>
-		<span>directed by: <b>Courtney Price</b></span>
-		<span>produced by: <b>Hampshire College Theatre Board</b></span>
-	</div>
-	<div class="main-image">
-		<img id="gallery-main-image" src="/images/photos/lookingglass/lookingglass1.jpg" alt="" data-image="image-1">
-	</div>
-	<div class="gallery-thumbs">
-		<ul>
-			<li><a data-image="/images/photos/lookingglass/lookingglass1.jpg"><img src="/images/photos/thumbs/lookingglass/lookingglass1t.jpg" alt=""></a></li>
-			<li><a data-image="/images/photos/lookingglass/lookingglass2.jpg"><img src="/images/photos/thumbs/lookingglass/lookingglass2t.jpg" alt=""></a></li>
-			<li><a data-image="/images/photos/lookingglass/lookingglass3.jpg"><img src="/images/photos/thumbs/lookingglass/lookingglass3t.jpg" alt=""></a></li>
-			<li><a data-image="/images/photos/lookingglass/lookingglass4.jpg"><img src="/images/photos/thumbs/lookingglass/lookingglass4t.jpg" alt=""></a></li>
-			<li><a data-image="/images/photos/lookingglass/lookingglass5.jpg"><img src="/images/photos/thumbs/lookingglass/lookingglass5t.jpg" alt=""></a></li>
-			<li><a data-image="/images/photos/lookingglass/lookingglass6.jpg"><img src="/images/photos/thumbs/lookingglass/lookingglass6t.jpg" alt=""></a></li>
-			<li><a data-image="/images/photos/lookingglass/lookingglass7.jpg"><img src="/images/photos/thumbs/lookingglass/lookingglass7t.jpg" alt=""></a></li>
-			<li><a data-image="/images/photos/lookingglass/lookingglass8.jpg"><img src="/images/photos/thumbs/lookingglass/lookingglass8t.jpg" alt=""></a></li>
-			<li><a data-image="/images/photos/lookingglass/lookingglass9.jpg"><img src="/images/photos/thumbs/lookingglass/lookingglass9t.jpg" alt=""></a></li>
-			<li><a data-image="/images/photos/lookingglass/lookingglass10.jpg"><img src="/images/photos/thumbs/lookingglass/lookingglass10t.jpg" alt=""></a></li>
-			<li><a data-image="/images/photos/lookingglass/lookingglass11.jpg"><img src="/images/photos/thumbs/lookingglass/lookingglass11t.jpg" alt=""></a></li>
-			<li><a data-image="/images/photos/lookingglass/lookingglass12.jpg"><img src="/images/photos/thumbs/lookingglass/lookingglass12t.jpg" alt=""></a></li>
-			<li><a data-image="/images/photos/lookingglass/lookingglass13.jpg"><img src="/images/photos/thumbs/lookingglass/lookingglass13t.jpg" alt=""></a></li>
-			<li><a data-image="/images/photos/lookingglass/lookingglass14.jpg"><img src="/images/photos/thumbs/lookingglass/lookingglass14t.jpg" alt=""></a></li>
-			<li><a data-image="/images/photos/lookingglass/lookingglass15.jpg"><img src="/images/photos/thumbs/lookingglass/lookingglass15t.jpg" alt=""></a></li>
-			<li><a data-image="/images/photos/lookingglass/lookingglass16.jpg"><img src="/images/photos/thumbs/lookingglass/lookingglass16t.jpg" alt=""></a></li>
-			<li><a data-image="/images/photos/lookingglass/lookingglass17.jpg"><img src="/images/photos/thumbs/lookingglass/lookingglass17t.jpg" alt=""></a></li>
-			<li><a data-image="/images/photos/lookingglass/lookingglass18.jpg"><img src="/images/photos/thumbs/lookingglass/lookingglass18t.jpg" alt=""></a></li>
-		</ul>
-	</div>
-</div>
+{% assign show = site.data.shows.looking-glass %}
+{% include show-page.html %}

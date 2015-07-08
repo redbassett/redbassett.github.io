@@ -1,0 +1,25 @@
+<script>
+	$.imgpreload([{% for image in show.images %}'{{ image.url }}'{% if forloop.rindex > 1 %},{% endif %}{% endfor %}]);
+</script>
+<div class="gallery">
+	<div class="show-info">
+		<h1 class="show-title">{{ show.title }}</h1>
+		{% if show.author %}<span>by: <b>{{ show.author }}</b></span>{% endif %}
+		<span>directed by: <b>{{ show.director }}</b></span>
+		<span>produced by: <b>{{ show.producer }}</b></span>
+	</div>
+	<div class="main-image">
+		{% assign firstImage = show.images[0] %}
+		<img id="gallery-main-image" src="{{ firstImage.url}}" alt="" data-image="image-1" data-credit="{{ firstImage.credit }}">
+		{% if firstImage.credit %}<div class="photo-credit">Photo Credit: {{ firstImage.credit }}</div>{% endif %}
+	</div>
+	<div class="gallery-thumbs">
+		<ul>
+			{% for image in show.images %}
+				<li>
+					<a data-image="{{ image.url }}"{% if image.credit %} data-credit="{{ image.credit }}"{% endif %}><img src="{{ image.thumb }}" alt=""></a>
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
+</div>

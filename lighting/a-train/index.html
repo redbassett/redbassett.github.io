@@ -3,45 +3,5 @@ layout: site
 title: Jesus Hopped the &lsquo;A&rsquo; Train - Harry Grillo
 class: a-train
 ---
-<script>
-	$.imgpreload(['/images/photos/jhat/jhat1.jpg','/images/photos/jhat/jhat2.jpg','/images/photos/jhat/jhat3.jpg','/images/photos/jhat/jhat4.jpg','/images/photos/jhat/jhat5.jpg','/images/photos/jhat/jhat6.jpg','/images/photos/jhat/jhat7.jpg','/images/photos/jhat/jhat8.jpg','/images/photos/jhat/jhat9.jpg','/images/photos/jhat/jhat10.jpg','/images/photos/jhat/jhat11.jpg','/images/photos/jhat/jhat12.jpg','/images/photos/jhat/jhat13.jpg','/images/photos/jhat/jhat14.jpg','/images/photos/jhat/jhat15.jpg','/images/photos/jhat/jhat16.jpg','/images/photos/jhat/jhat17.jpg','/images/photos/jhat/jhat18.jpg','/images/photos/jhat/jhat19.jpg','/images/photos/jhat/jhat20.jpg','/images/photos/jhat/jhat21.jpg','/images/photos/jhat/jhat22.jpg']);
-</script>
-<div class="gallery">
-	<div class="show-info">
-		<h1 class="show-title">Jesus Hopped the &lsquo;A&rsquo; Train</h1>
-		<span>by: <b>Stephen Adly Guirgis</b></span>
-		<span>directed by: <b>Martin Hutchinson</b></span>
-		<span>produced by: <b>Hampshire College Theatre Board</b></span>
-	</div>
-	<div class="main-image">
-		<img id="gallery-main-image" src="/images/photos/jhat/jhat1.jpg" alt="" data-image="image-1" data-credit="Janine Norton">
-		<div class="photo-credit">Photo Credit: Janine Norton</div>
-	</div>
-	<div class="gallery-thumbs">
-		<ul>
-			<li><a data-image="/images/photos/jhat/jhat1.jpg" data-credit="Janine Norton"><img src="/images/photos/thumbs/jhat/jhat1t.jpg" alt=""></a></li>
-			<li><a data-image="/images/photos/jhat/jhat2.jpg" data-credit="Janine Norton"><img src="/images/photos/thumbs/jhat/jhat2t.jpg" alt=""></a></li>
-			<li><a data-image="/images/photos/jhat/jhat3.jpg" data-credit="Janine Norton"><img src="/images/photos/thumbs/jhat/jhat3t.jpg" alt=""></a></li>
-			<li><a data-image="/images/photos/jhat/jhat4.jpg" data-credit="Janine Norton"><img src="/images/photos/thumbs/jhat/jhat4t.jpg" alt=""></a></li>
-			<li><a data-image="/images/photos/jhat/jhat5.jpg" data-credit="Janine Norton"><img src="/images/photos/thumbs/jhat/jhat5t.jpg" alt=""></a></li>
-			<li><a data-image="/images/photos/jhat/jhat6.jpg" data-credit="Janine Norton"><img src="/images/photos/thumbs/jhat/jhat6t.jpg" alt=""></a></li>
-			<li><a data-image="/images/photos/jhat/jhat7.jpg" data-credit="Janine Norton"><img src="/images/photos/thumbs/jhat/jhat7t.jpg" alt=""></a></li>
-			<li><a data-image="/images/photos/jhat/jhat8.jpg" data-credit="Janine Norton"><img src="/images/photos/thumbs/jhat/jhat8t.jpg" alt=""></a></li>
-			<li><a data-image="/images/photos/jhat/jhat9.jpg" data-credit="Janine Norton"><img src="/images/photos/thumbs/jhat/jhat9t.jpg" alt=""></a></li>
-			<li><a data-image="/images/photos/jhat/jhat10.jpg" data-credit="Janine Norton"><img src="/images/photos/thumbs/jhat/jhat10t.jpg" alt=""></a></li>
-			<li><a data-image="/images/photos/jhat/jhat11.jpg" data-credit="Janine Norton"><img src="/images/photos/thumbs/jhat/jhat11t.jpg" alt=""></a></li>
-			<li><a data-image="/images/photos/jhat/jhat12.jpg" data-credit="Janine Norton"><img src="/images/photos/thumbs/jhat/jhat12t.jpg" alt=""></a></li>
-			<li><a data-image="/images/photos/jhat/jhat13.jpg" data-credit="Janine Norton"><img src="/images/photos/thumbs/jhat/jhat13t.jpg" alt=""></a></li>
-			<li><a data-image="/images/photos/jhat/jhat14.jpg" data-credit="Janine Norton"><img src="/images/photos/thumbs/jhat/jhat14t.jpg" alt=""></a></li>
-			<li><a data-image="/images/photos/jhat/jhat15.jpg" data-credit="Janine Norton"><img src="/images/photos/thumbs/jhat/jhat15t.jpg" alt=""></a></li>
-			<li><a data-image="/images/photos/jhat/jhat16.jpg" data-credit="Janine Norton"><img src="/images/photos/thumbs/jhat/jhat16t.jpg" alt=""></a></li>
-			<li><a data-image="/images/photos/jhat/jhat17.jpg" data-credit="Janine Norton"><img src="/images/photos/thumbs/jhat/jhat17t.jpg" alt=""></a></li>
-			<li><a data-image="/images/photos/jhat/jhat18.jpg" data-credit="Janine Norton"><img src="/images/photos/thumbs/jhat/jhat18t.jpg" alt=""></a></li>
-			<li><a data-image="/images/photos/jhat/jhat19.jpg" data-credit="Janine Norton"><img src="/images/photos/thumbs/jhat/jhat19t.jpg" alt=""></a></li>
-			<li><a data-image="/images/photos/jhat/jhat20.jpg" data-credit="Janine Norton"><img src="/images/photos/thumbs/jhat/jhat20t.jpg" alt=""></a></li>
-			<li><a data-image="/images/photos/jhat/jhat21.jpg" data-credit="Janine Norton"><img src="/images/photos/thumbs/jhat/jhat21t.jpg" alt=""></a></li>
-			<li><a data-image="/images/photos/jhat/jhat22.jpg" data-credit="Janine Norton"><img src="/images/photos/thumbs/jhat/jhat22t.jpg" alt=""></a></li>
-			<li><a data-image="/images/photos/jhat/jhat23.jpg" data-credit="Harry Grillo"><img src="/images/photos/thumbs/jhat/jhat23t.jpg" alt=""></a></li>
-		</ul>
-	</div>
-</div>
+{% assign show = site.data.shows.a-train %}
+{% include show-page.html %}
