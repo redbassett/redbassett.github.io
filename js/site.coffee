@@ -1,7 +1,7 @@
 ---
 ---
 (($) ->
-	$.imgpreload(['/images/backgrounds/home.jpg', '/images/backgrounds/lighting.jpg', '/images/backgrounds/code.jpg']);
+	$.imgpreload(['/images/backgrounds/home.jpg', '/images/backgrounds/lighting.jpg', '/images/backgrounds/code.jpg','/images/backgrounds/resume.jpg']);
 	
 	$ ->
 		$mainImage = $ 'img#gallery-main-image'
