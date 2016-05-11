@@ -365,6 +365,37 @@ section.code {
 	div.dev-notice {
 		text-align: center;
 	}
+
+	div.stack {
+		max-width: 750px;
+		margin: 0 auto;
+
+		h2 {
+			text-align: center;
+		}
+
+		h3 {
+
+		}
+
+		ul {
+			padding-left: 0;
+
+			li {
+				list-style: none;
+				background-color: $theme-green;
+				display: inline;
+				padding: .2em .6em .3em;
+				font-weight: bold;
+				line-height: 2.3;
+				text-align: center;
+				white-space: nowrap;
+				vertical-align: baseline;
+				border-radius: .25em;
+				color: black;
+			}
+		}
+	}
 }
 
 body.resume {
