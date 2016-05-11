@@ -1,2 +1,10 @@
 include: [".well-known"]
 exclude: ["site.sublime-project","site.sublime-workspace"]
+gems:
+  - jekyll-seo-tag
+title: "Harry Grillo"
+url: "http://harrygrillo.com"
+twitter:
+  username: redbassett
+logo: "/images/identicon.png"
+image: "/images/identicon.png"
