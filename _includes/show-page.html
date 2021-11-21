@@ -5,8 +5,8 @@
 	<div class="show-info">
 		<h1 class="show-title">{{ show.title }}</h1>
 		{% if show.author %}<span>by: <b>{{ show.author }}</b></span>{% endif %}
-		<span>directed by: <b>{{ show.director }}</b></span>
-		<span>produced by: <b>{{ show.producer }}</b></span>
+		{% if show.director %}<span>directed by: <b>{{ show.director }}</b></span>{% endif %}
+		{% if show.producer %}<span>produced by: <b>{{ show.producer }}</b></span>{% endif %}
 	</div>
 	<div class="main-image">
 		{% assign firstImage = show.images[0] %}
