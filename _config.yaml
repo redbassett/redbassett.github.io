@@ -1,10 +1,12 @@
 include: [".well-known"]
 exclude: ["site.sublime-project","site.sublime-workspace"]
-gems:
+plugins:
   - jekyll-seo-tag
+  - jekyll-coffeescript
 title: "Enrico Grillo"
 url: "http://grillo.lighting"
 twitter:
   username: redbassett
 logo: "/images/identicon.png"
 image: "/images/identicon.png"
+
